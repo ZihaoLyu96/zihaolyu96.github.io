@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <style>
+        .language {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 语言切换按钮 -->
+    <div>
+        <button onclick="switchLanguage('zh')">中文</button>
+        <button onclick="switchLanguage('en')">English</button>
+    </div>
+
+    <!-- 中文内容 -->
+    <div id="zh" class="language active">
+        <h1>你好，我是[你的名字]</h1>
+        <p>这是我的个人简历。</p>
+        <h2>教育背景</h2>
+        <p>简要描述你的教育背景。</p>
+        <h2>工作经验</h2>
+        <p>简要描述你的工作经验。</p>
+        <h2>技能</h2>
+        <ul>
+            <li>技能1</li>
+            <li>技能2</li>
+            <li>技能3</li>
+        </ul>
+        <h2>联系方式</h2>
+        <p>邮箱: [你的邮箱]</p>
+    </div>
+
+    <!-- 英文内容 -->
+    <div id="en" class="language">
+        <h1>Hello, I am [Your Name]</h1>
+        <p>This is my resume.</p>
+        <h2>Education</h2>
+        <p>A brief description of your education background.</p>
+        <h2>Work Experience</h2>
+        <p>A brief description of your work experience.</p>
+        <h2>Skills</h2>
+        <ul>
+            <li>Skill 1</li>
+            <li>Skill 2</li>
+            <li>Skill 3</li>
+        </ul>
+        <h2>Contact</h2>
+        <p>Email: [Your Email]</p>
+    </div>
+
+    <script>
+        function switchLanguage(language) {
+            document.getElementById('zh').classList.remove('active');
+            document.getElementById('en').classList.remove('active');
+            document.getElementById(language).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
